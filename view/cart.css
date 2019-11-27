@@ -198,7 +198,7 @@ body{
  background: palevioletred;
 }
 
-
+/* ChatBox CSS */
 
 * {
   margin: 0;
@@ -242,13 +242,13 @@ body{
   min-height: 200px;
 }
 
-/* When the textarea gets focus, do something */
+
 .form-container textarea:focus {
   background-color: white;
   outline: none;
 }
 
-/* Set a style for the submit/send button */
+/* Sets style for the submit/send button */
 .form-container .btn {
   background-color: palevioletred;
   color: black;
@@ -260,12 +260,12 @@ body{
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
+/* Adding red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
 }
 
-/* Add some hover effects to buttons */
+/* Adding some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
