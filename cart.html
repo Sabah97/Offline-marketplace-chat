@@ -569,7 +569,7 @@
      
    <form class="form-container">
       <label for="msg"><b>Message</b></label>
-      <textarea placeholder="Type message.." name="msg" required></textarea>
+      <textarea placeholder="Type message.." id="msg" name="msg" required></textarea>
       <ul id="messages"></ul>
       <form action="">
       <button type="submit" class="btn">Send</button>
@@ -596,11 +596,12 @@
     var socket = io();
     $('form').submit(function(e){
       e.preventDefault(); // prevents page reloading
-      socket.emit('chat message', $('.btn').val());
-      $('.btn').val('');
+      socket.emit('chat message', $('#msg').val());
+      $('#msg').val('');
       return false;
     });
     socket.on('chat message', function(msg){
+      console.log(msg);
       $('#messages').append($('<li>').text(msg));
     });
   });
